@@ -34,3 +34,56 @@
 ![](screenshots/12.png)
 ![](screenshots/13.png)
 ![](screenshots/14.png)
+
+### Лог команд
+
+git config --global user.name "4516 Гречаный Г. П."
+git config --global user.email "grigory.grechany@gmail.com"
+cd "C:\Users\grigo\Downloads\Учёба (2 курс)\ОСНОВЫ ПРОГРАММИРОВАНИЯ"
+git clone https://github.com/BOZZandBOSS/LR6.git
+cd LR6
+git pull origin master
+git branch -a
+git log
+git checkout branch1
+git log
+git status
+git show
+git checkout master
+git status
+git show
+git merge branch1
+git add .
+git commit -m "Разрешил конфликт при слиянии"
+git branch -d branch1
+git commit -am "первое изменение"
+git commit -am "второе изменение"
+git commit -am "третье изменение"
+git revert --no-edit HEAD
+git checkout -b report
+git add screenshots
+git commit -m "Добавил папку со скриншотами"
+git add README.md
+git commit -m "Оформил основную часть отчета и добавил скриншоты"
+git log --pretty=format:"%h - %ad, %an : %s" --date=short
+git add README.md
+git commit -m "Добавил лог команд и историю операций, финальная версия отчета"
+git push origin report
+
+### История операций
+
+Команда git log --pretty=format:"%h - %ad, %an : %s" --date=short вывела:
+
+7c36476 - 2026-11-11, 4516 Гречаный Г. П. : Оформил основную часть отчета и добавил скриншоты
+260360c - 2026-11-11, 4516 Гречаный Г. П. : Добавил новый скриншот в папку
+d550f7f - 2026-11-11, 4516 Гречаный Г. П. : Добавил папку со скриншотами
+b27eecf - 2026-11-11, 4516 Гречаный Г. П. : Revert "третье изменение"
+548885a - 2026-11-11, 4516 Гречаный Г. П. : третье изменение
+ece28b2 - 2026-11-11, 4516 Гречаный Г. П. : второе изменение
+065de40 - 2026-11-11, 4516 Гречаный Г. П. : первое изменение
+4862daa - 2026-11-11, 4516 Гречаный Г. П. : Разрешил конфликт при слиянии
+37a469a - 2026-11-11, BOZZ : Create test.txt
+921f53b - 2020-11-21, Kurtyanik : Обновление информации
+0f9f50d - 2020-11-21, Kurtyanik : Заполнил файл
+c08a654 - 2020-11-21, Kurtyanik : Файл создан пустым
+3c6e913 - 2020-11-21, Kurtyanik : Initial commit
